@@ -23,7 +23,7 @@ import javafx.util.Duration;
 public class Utils {
     public static <T> T replaceScene(ActionEvent event, String fxmlPath, String title) {
         try {
-            FXMLLoader loader = new FXMLLoader(Utils.class.getResource("/co/edu/uniquindio/poo/neodelivery/" + fxmlPath));
+            FXMLLoader loader = new FXMLLoader(Utils.class.getResource("/co/edu/uniquindio/poo/parcial_iii/" + fxmlPath));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -41,7 +41,7 @@ public class Utils {
 
     public static <T> T replaceMainContent(AnchorPane mainContent, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(Utils.class.getResource("/co/edu/uniquindio/poo/neodelivery/" + fxmlPath));
+            FXMLLoader loader = new FXMLLoader(Utils.class.getResource("/co/edu/uniquindio/poo/parcial_iii/" + fxmlPath));
             Node view = loader.load();
 
             mainContent.getChildren().setAll(view);
@@ -56,7 +56,6 @@ public class Utils {
             return null;
         }
     }
-
 
     public static String hashPassword(String password) {
         try {
@@ -81,15 +80,15 @@ public class Utils {
 
     public static void showAlert(String type, String message) {
 
-        String css = Utils.class.getResource("/co/edu/uniquindio/poo/neodelivery/styles.css").toExternalForm();
+        String css = Utils.class.getResource("/co/edu/uniquindio/poo/parcial_iii/styles.css").toExternalForm();
 
         String iconPath = switch (type.toUpperCase()) {
-            case "ERROR" -> "/co/edu/uniquindio/poo/neodelivery/icons/error.png";
-            case "WARNING" -> "/co/edu/uniquindio/poo/neodelivery/icons/warning.png";
-            case "VERIFIED" -> "/co/edu/uniquindio/poo/neodelivery/icons/verified.png";
-            case "DAVIPLATA" -> "/co/edu/uniquindio/poo/neodelivery/icons/daviplata.png";
-            case "NEQUI" -> "/co/edu/uniquindio/poo/neodelivery/icons/nequi.png";
-            default -> "/co/edu/uniquindio/poo/neodelivery/icons/info.png";
+            case "ERROR" -> "/co/edu/uniquindio/poo/parcial_iii/icons/error.png";
+            case "WARNING" -> "/co/edu/uniquindio/poo/parcial_iii/icons/warning.png";
+            case "VERIFIED" -> "/co/edu/uniquindio/poo/parcial_iii/icons/verified.png";
+            case "DAVIPLATA" -> "/co/edu/uniquindio/poo/parcial_iii/icons/daviplata.png";
+            case "NEQUI" -> "/co/edu/uniquindio/poo/parcial_iii/icons/nequi.png";
+            default -> "/co/edu/uniquindio/poo/parcial_iii/icons/info.png";
         };
 
         Alert alert = new Alert(Alert.AlertType.NONE);

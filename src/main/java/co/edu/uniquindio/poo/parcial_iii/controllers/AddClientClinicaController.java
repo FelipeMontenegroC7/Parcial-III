@@ -7,18 +7,17 @@ import co.edu.uniquindio.poo.parcial_iii.Model.Utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
-public class RegisterViewController {
+public class AddClientClinicaController {
 
     @FXML
-    private Button btnRegisterClient;
+    private Button btnCancel;
 
     @FXML
-    private Hyperlink hyperLLogin;
+    private Button btnCreateUser;
 
     @FXML
     private BorderPane rootPane;
@@ -42,18 +41,19 @@ public class RegisterViewController {
     private TextField txtUserNameClient;
 
     @FXML
-    void goToLogin(ActionEvent event) {
-        Utils.replaceScene(event, "loginView.fxml", "Login");
+    void cancelCreate(ActionEvent event) {
+        // Go back to clinica dashboard
+        Utils.replaceScene(event, "clinicaDashboard.fxml", "Clinica Dashboard");
     }
 
     @FXML
-    void register(ActionEvent event) {
+    void createUser(ActionEvent event) {
         String id = txtIdClient.getText();
         String nombre = txtName.getText();
         String email = txtEmailClient.getText();
         String telefono = txtPhoneNumberClient.getText();
         String usuario = txtUserNameClient.getText();
-        String contrasenia = txtPasswordClient.getText();
+        String contrasenia = Utils.hashPassword(txtPasswordClient.getText());
 
         if (id.isEmpty() || nombre.isEmpty() || email.isEmpty() || telefono.isEmpty() || usuario.isEmpty() || contrasenia.isEmpty()) {
             Utils.showAlert("WARNING", "All fields are required");
@@ -72,8 +72,8 @@ public class RegisterViewController {
         DataBase db = Clinica.getInstance().getDataBase();
         db.getPacientes().add(paciente);
 
-        Utils.showAlert("VERIFIED", "Registration successful");
-        goToLogin(event);
+        Utils.showAlert("VERIFIED", "User created successfully");
+        // Go back to clinica dashboard
+        Utils.replaceScene(event, "clinicaDashboard.fxml", "Clinica Dashboard");
     }
-
 }

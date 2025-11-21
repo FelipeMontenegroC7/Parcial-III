@@ -4,8 +4,6 @@ package co.edu.uniquindio.poo.parcial_iii.Model;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
 import java.util.Properties;
 
 public class EmailService {

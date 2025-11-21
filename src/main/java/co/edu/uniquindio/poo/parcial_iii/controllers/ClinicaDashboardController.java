@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.parcial_iii.controllers;
 
+import co.edu.uniquindio.poo.parcial_iii.Model.Utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,6 +23,9 @@ public class ClinicaDashboardController {
     private Button btngestionarMedicos;
 
     @FXML
+    private Button btngestionarUsuarios;
+
+    @FXML
     private AnchorPane mainContent;
 
     @FXML
@@ -38,27 +42,35 @@ public class ClinicaDashboardController {
 
     @FXML
     void goToContratarMedicos(ActionEvent event) {
-
+        Utils.replaceMainContent(mainContent, "addMedic.fxml");
     }
 
     @FXML
     void goToGestionarMedicos(ActionEvent event) {
+        Utils.replaceMainContent(mainContent, "manegeMedics(Clinica).fxml");
+    }
 
+    @FXML
+    void goToGestionarUsuarios(ActionEvent event) {
+        Utils.replaceMainContent(mainContent, "manageUsers(Clinica).fxml");
     }
 
     @FXML
     void goToHome(ActionEvent event) {
-
+        // Load home view, perhaps a welcome label
+        mainContent.getChildren().clear();
+        // For now, clear
     }
 
     @FXML
     void logOut(ActionEvent event) {
-
+        Utils.replaceScene(event, "loginView.fxml", "Login");
     }
 
     @FXML
     void slideMenu(ActionEvent event) {
-
+        // Toggle menu visibility
+        menu.setVisible(!menu.isVisible());
     }
 
 }

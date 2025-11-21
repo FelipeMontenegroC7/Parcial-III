@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1075.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.neodelivery.controllers.ClinicaDashboardController">
+<BorderPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1075.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial_iii.controllers.ClinicaDashboardController">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -53,6 +53,14 @@
                         <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../images/clientOrder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button id="dashboardButton" fx:id="btngestionarUsuarios" mnemonicParsing="false" onAction="#goToGestionarUsuarios" prefHeight="24.0" prefWidth="202.0" text="Gestion Usuarios">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/clientImage(Admin).png" />
                            </image>
                         </ImageView>
                      </graphic></Button>

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.neodelivery.controllers.ClienteDashboardController">
+<BorderPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial_iii.controllers.ClienteDashboardController">
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -40,7 +40,7 @@
             </Pane>
             <VBox alignment="TOP_CENTER" layoutY="96.0" prefHeight="430.0" prefWidth="200.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
                <children>
-                  <Button id="dashboardButton" fx:id="btnSolicitarCita" mnemonicParsing="false" onAction="#goToCitasAsignadas" prefHeight="24.0" prefWidth="194.0" text="Solicitar Cita" VBox.vgrow="SOMETIMES">
+                  <Button id="dashboardButton" fx:id="btnSolicitarCita" mnemonicParsing="false" onAction="#goToSolicitarCita" prefHeight="24.0" prefWidth="194.0" text="Solicitar Cita" VBox.vgrow="SOMETIMES">
                      <graphic>
                         <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -48,7 +48,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button id="dashboardButton" fx:id="btnHistorialCitas" mnemonicParsing="false" onAction="#goToHistorialPacientes" prefHeight="24.0" prefWidth="202.0" text="Historial Citas">
+                  <Button id="dashboardButton" fx:id="btnHistorialCitas" mnemonicParsing="false" onAction="#goToHistorialCitas" prefHeight="24.0" prefWidth="202.0" text="Historial Citas">
                      <graphic>
                         <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
